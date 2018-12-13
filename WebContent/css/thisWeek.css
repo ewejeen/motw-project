@@ -1,0 +1,208 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.thisWeek {
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 200px;
+}
+
+.thisWeek .container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.thisWeek .container .con ul li {
+	width: 100%;
+	height: 400px;
+	margin: 0 auto;
+	margin-bottom: 80px;
+}
+
+.thisWeek .container .con ul li img {
+	height: 100%;
+	float: left;
+	cursor: pointer;
+}
+
+.thisWeek .container .con p.catchph {
+	margin-left: 30px;
+	height: 180px;
+	padding-top: 50px;
+	line-height: 40px;
+	text-align: center;
+	font-style: italic;
+	font-size: 25px;
+	font-weight: bold;
+	color: #c10000;
+	box-sizing: border-box;
+	width: 72%;
+	float: left;
+}
+
+.thisWeek .container .con .sub {
+	margin-left: 30px;
+	box-sizing: border-box;
+	width: 72%;
+	height: 220px;
+	float: left;
+	padding-left: 20px;
+}
+
+.thisWeek .container .con .sub .ttl {
+	width: 100%;
+	height: auto;
+}
+
+.thisWeek .container .con .sub img.motwImg {
+	display: block;
+	width: 40px;
+	height: 40px;
+	position: relative;
+	top: -20px;
+	cursor: default;
+}
+
+.thisWeek .container .con .sub .empty {
+	width: 40px;
+	height: 40px;
+	display: inline;
+}
+
+.thisWeek .container .con .sub .title {
+	font-size: 40px;
+	margin-right: 10px;
+	font-weight: 700;
+}
+
+.thisWeek .container .con .sub .title:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.thisWeek .container .con .sub .rlsDate {
+	color: #999;
+}
+
+.thisWeek .container .con .sub .ssub {
+	margin-top: 20px;
+}
+
+.thisWeek .container .con .sub .ssub span {
+	width: 17%;
+	float: left;
+	font-size: 18px;
+	font-weight: 500;
+	font-style: italic;
+	line-height: 40px;
+}
+
+.thisWeek .container .con .sub .ssub p {
+	width: 80%;
+	line-height: 40px;
+	font-size: 16px;
+	float: left;
+}
+
+.thisWeek .container .con .logos {
+	width: 100%;
+	height: 60px;
+	float: left;
+}
+
+.thisWeek .container .logos span.heart {
+	display: inline-block;
+	width: 150px;
+	height: 35px;
+	line-height: 35px;
+	background: url('../img/heart_red.png') no-repeat 1% 50%;
+	background-size: 35px 35px;
+	cursor: pointer;
+	margin-top: 20px;
+	text-indent: 40px;
+	font-size: 12px;
+	font-style: italic;
+	color: #c20000;
+	float: right;
+}
+
+.thisWeek .container .logos span.heart:hover {
+	text-decoration: underline;
+}
+
+.thisWeek .container .con .logos input {
+	height: 60px;
+	width: 60px;
+	margin-right: 30px;
+	border: 0;
+	color: transparent;
+	float: right;
+	cursor: pointer;
+}
+
+.thisWeek .container .con .logos input:hover {
+	border: 2px solid #fff;
+}
+
+.thisWeek .container .con .logos input.youtube {
+	background: url("../img/logo/youtube.png");
+	background-size: cover;
+}
+
+.thisWeek .container .con .logos input.wiki {
+	background: url("../img/logo/wikipedia.png");
+	background-size: cover;
+}
+
+.thisWeek .container .con .logos input.imdb {
+	background: url("../img/logo/imdb.png");
+	background-size: cover;
+}
+
+.thisWeek .container .con .logos input.rotten {
+	background: url("../img/logo/rottentomatoes.jpg");
+	background-size: cover;
+}
+
+.paging {
+	margin: 70px auto 0;
+	text-align: center;
+}
+
+.paging ul {
+	padding-top: 40px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.paging a {
+	padding: 0 5px;
+}
+
+.nopost {
+	line-height: 30px;
+}
+
+.nopost.one {
+	padding-top: 70px;
+}
+
+.nopost.two a {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.nopost.two a:hover {
+	color: #c10000;
+}
+
+.footer {
+	float: right;
+}

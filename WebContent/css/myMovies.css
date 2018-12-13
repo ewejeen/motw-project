@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	min-height: 100%;
+	position: relative;
+}
+
+.myMovies {
+	top: 50px;
+	width: 100%;
+	height: auto;
+	margin-top:50px;
+}
+
+.myMovies .container {
+	width: 75%;
+	height:100%;
+	margin: 0 auto;
+}
+
+.container .top {
+	width: 100%;
+	height: 80px;
+}
+
+.container .top h1 {
+	float: left;
+	color: #c10000;
+	font-size: 38px;
+	font-weight:800;
+}
+
+.myMovies .container .con {
+	width:100%;
+	height:100%;
+}
+
+.myMovies .container .con p.empty {
+	text-align: center;
+	line-height: 30px;
+	margin-top: 80px;
+}
+
+.myMovies .container .con a.empty {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 30px;
+}
+
+.myMovies .container .con a.empty:hover {
+	color: #c10000;
+}
+
+.myMovies .container .con h5 {
+	font-size: 13px;
+	font-weight: 100;
+	padding-top: 10px;
+	padding-bottom: 30px;
+}
+.myMovies .container .con h5.l1 {
+	font-size: 15px;
+	font-weight: bold;
+	padding-top: 20px;
+	padding-bottom: 0;
+}
+
+.myMovies .container .con h5.l1.l2 {
+	padding-bottom: 30px;
+}
+
+.myMovies .container .con ul{
+	width:100%;
+	height:100%;
+}
+
+.myMovies .container .con ul li {
+	width: 100%;
+	height: 200px;
+	padding: 0 30px;
+	box-sizing: border-box;
+	margin-bottom: 20px;
+}
+
+.myMovies .container .con ul li img {
+	display: block;
+	float: left;
+	height: 200px;
+}
+
+.myMovies .container .con ul li .sub {
+	box-sizing: border-box;
+	padding-top: 70px;
+}
+
+.myMovies .container .con ul li .sub span.title {
+	font-size: 30px;
+	font-weight: bold;
+	margin-left: 120px;
+}
+
+.myMovies .container .con ul li .sub span.title:hover{
+	cursor:pointer;
+	text-decoration: underline;
+}
+
+.myMovies .container .con ul li .sub span.rlsDate {
+	font-size: 13px;
+	margin-left: 10px;
+	color: #999;
+}
+
+.myMovies .container .con ul li .sub p.director {
+	font-size: 15px;
+	text-indent: 200px;
+	padding-top: 5px;
+	font-style: italic;
+}
+
+.myMovies .container .con ul li .menu input {
+	float: right;
+	background: #c10000;
+	border: 0;
+	color: #fff;
+	width: 100px;
+	height: 40px;
+	cursor: pointer;
+}
+
+.myMovies .container .con ul li .menu input:hover {
+	font-weight: bold;
+}

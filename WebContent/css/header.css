@@ -1,0 +1,103 @@
+@charset "UTF-8";
+
+body, table, div, p, span {
+}
+
+.header {
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	box-shadow: 1px 1px 10px #999;
+	z-index:10;
+}
+
+.header .topHeader {
+	width: 100%;
+	height: 50px;
+	background: #fff;
+	position: fixed;
+	z-index: 10;
+}
+
+.header .topHeader ul {
+	width: 90%;
+	background: #fff;
+	margin: 0 auto;
+}
+
+.header .topHeader ul li {
+	width: 18.5%;
+	float: left;
+	line-height: 50px;
+	text-align: center;
+}
+
+.header .topHeader ul li.menu.m1 {
+	width: 18.5%;
+	height: 100%;
+	cursor: pointer;
+	background: url("../img/logo_v3.png") no-repeat 50%;
+	background-size: 65%;
+}
+
+.header .topHeader ul li a {
+	display: block;
+}
+
+.header .topHeader ul li.menu:hover {
+	border-bottom: 3px solid #d10000;
+}
+
+.header .topHeader ul li:nth-child(6) {
+	width: 7.5%;
+}
+
+.header .topHeader ul li button.user {
+	width: 40px;
+	height: 40px;
+	margin: 5px 0;
+	cursor: pointer;
+	background: url("../img/user.png") no-repeat 50%;
+	background-size: cover;
+	border: 0;
+	position: relative;
+	right: -15px;
+}
+.header .topHeader ul li button.user.v2 {
+	background: url("../img/user_v2.png") no-repeat 50%;
+	background-size: cover;
+}
+
+.header .topHeader ul li .userMenu {
+	position: absolute;
+	background: #d10000;
+	top: 50px;
+	right: 0px;
+	width: 200px;
+	height: auto;
+	z-index: 10;
+	visibility: hidden;
+	opacity: 0;
+	transition: all 0.2s ease;
+	box-shadow: 1px 1px 10px #000;
+}
+
+.header .topHeader ul li .userMenu.open {
+	visibility: visible;
+	opacity: 1;
+}
+
+.header .topHeader ul li .userMenu a {
+	display: block;
+	color: #fff;
+}
+
+.header .topHeader ul li .userMenu a:hover{
+	font-weight:bold;
+}
+
+.header .topHeader ul li .userMenu span {
+	display: block;
+	color: #fff;
+	border-bottom: 1px dashed #fff;
+}

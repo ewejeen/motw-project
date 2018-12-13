@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.viewReply {
+	width: 100%;
+	height: 100%;
+	padding-bottom: 200px;
+}
+
+.viewReply:after {
+	content: "";
+	height: 0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+.cView {
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 200px;
+}
+
+.cView .container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.cView .con ul li {
+	width: 100%;
+	margin: 0 auto;
+	height: 50px;
+	box-sizing: border-box;
+}
+
+.cView .con .ttl {
+	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid #c10000;
+	margin-bottom: 50px;
+	margin-top: 10px;
+}
+
+.cView .con .ttl h1 {
+	font-weight: 100;
+	float: left;
+	font-size: 25px;
+}
+
+.cView .con .ttl span {
+	float: right;
+	font-size: 13px;
+	line-height: 50px;
+	color: #999;
+}
+
+.cView ul li span.label {
+	width: 11%;
+	height: 100%;
+	font-size: 15px;
+	line-height: 50px;
+	font-weight: bold;
+	display: inline-block;
+	background: #c10000;
+	color: #fff;
+	text-align: center;
+	border-top: 1px solid #fff;
+}
+
+.cView ul li .content {
+	line-height: 50px;
+	width: 89%;
+	height: 50px;
+	margin: 0 auto;
+	border-top: 1px solid #ccc;
+	float: right;
+	box-sizing: border-box;
+	display: inline-block;
+	padding: 0 10px;
+}
+
+.cView ul li:nth-child(1) span.content {
+	font-weight: bold;
+}
+
+.cView ul li:nth-child(3) {
+	min-height: 400px;
+	height: auto;
+}
+
+.cView ul li:nth-child(3) span.label {
+	line-height: 400px;
+}
+
+.cView ul li:nth-child(3) .content {
+	min-height: 400px;
+	height: auto;
+	padding: 10px;
+	border-bottom: 1px solid #ccc;
+}
+
+.cView ul li:nth-child(4) {
+	padding-top: 10px;
+}
+
+.cView ul li:nth-child(4) input {
+	display: block;
+	font-size: 16px;
+	width: 13%;
+	height: 45px;
+	line-height: 45px;
+	text-indent: 0;
+	cursor: pointer;
+	float: right;
+	margin-left: 15px;
+	background: #8a0000;
+	color: #fff;
+}
+
+.cView ul li input[type=button] {
+	border: 0;
+}
+
+.cView ul li input[type=button].lBtn {
+	float: left;
+	margin-left: 0;
+	margin-right: 15px;
+}
+
+.cView ul li img.reply {
+	width: 50px;
+	float: left;
+	margin-left: 0;
+	margin-right: 50px;
+	cursor: pointer;
+}
+
+.cView ul li:nth-child(4) input:hover {
+	font-weight: bold;
+}
+
+.rightCon ul li span {
+	
+}
+
+.rightCon ul li:last-child {
+	height: auto;
+}
+
+.rightCon ul li:last-child label {
+	height: auto;
+	background: #c10000;
+}
+
+.rightCon ul li:last-child span {
+	border-bottom: 1px solid #000;
+	text-align: justify;
+}
+
+.cReply {
+	width: 75%;
+	height: auto;
+	margin: 150px auto;
+}
+
+.cReply h2 {
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+	border-bottom: 2px solid #c10000;
+}
+
+.cReply table {
+	width: 100%;
+	border-collapse: collapse;
+	float: left;
+}
+
+.cReply table tr {
+	border-bottom: 1px dashed #ccc;
+	height: 45px;
+	font-size: 14px;
+}
+
+.cReply table td:nth-child(1) {
+	width: 75%;
+	text-indent: 10px;
+}
+
+.cReply table td:nth-child(2) {
+	width: 7%;
+	text-align: center;
+	font-weight: bold;
+}
+
+.cReply table td:nth-child(3) {
+	width: 7%;
+	text-align: center;
+	font-size: 12px;
+	color: #999;
+}
+
+.cReply table td:nth-child(4) {
+	width: 2%;
+	text-align: center;
+}
+
+.cReply table td:nth-child(4) input {
+	font-weight: bold;
+	font-size: 12px;
+	cursor: pointer;
+	width: 45px;
+	height: 20px;
+	border: 0;
+	background: #d100008a;
+	color: #fff;
+}
+
+.cReply table td:nth-child(4) input:hover {
+	text-decoration: underline;
+}
+
+.cReply table tr:last-child {
+	border-bottom: 0;
+}
+
+.cReply form {
+	margin-top: 30px;
+	height: 100%;
+	width: 100%;
+	float: left;
+}
+
+.cReply form input#content {
+	display: block;
+	height: 40px;
+	text-indent: 10px;
+	width: 92%;
+	box-sizing: border-box;
+	border: 1px solid #ccc;
+	border-right: 0;
+	float: left;
+	margin-bottom: 100px;
+}
+
+.cReply form input#btn {
+	display: block;
+	height: 40px;
+	width: 8%;
+	border: 0;
+	background: #c10000;
+	color: #fff;
+	cursor: pointer;
+	float: right;
+}
+
+.cReply form input#btn:hover {
+	font-weight: bold;
+}
+
+.footer {
+	float: left;
+}

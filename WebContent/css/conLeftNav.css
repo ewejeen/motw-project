@@ -1,0 +1,44 @@
+.container .leftNav {
+	float: left;
+	width: 25%;
+	height: auto;
+	background: #c10000;
+	box-sizing: border-box;
+	padding: 50px 20px;
+	margin-bottom: 100px;
+}
+
+.leftNav img {
+	display: block;
+	width: 200px;
+	margin: 10px auto;
+}
+
+.leftNav ul li {
+	height: 60px;
+	line-height: 50px;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 10px;
+	color: #fff;
+}
+
+.leftNav ul li:nth-child(1) {
+	font-size: 25px;
+	border-bottom: 0;
+	height: 60px;
+	text-align: center;
+}
+
+.leftNav ul li a {
+	display: block;
+	height: 60px;
+	line-height: 60px;
+	margin-bottom: 10px;
+	color: #fff;
+	font-size: 17px;
+}
+
+.leftNav ul li a:hover {
+	font-size: 18px;
+	font-weight: bold;
+}

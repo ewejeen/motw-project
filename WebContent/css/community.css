@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.community {
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: 100%;
+	margin-bottom: 200px;
+}
+
+.community .container {
+	width: 75%;
+	height: 100%;
+	margin: 0 auto;
+}
+
+.community .container .table table {
+	margin-top: 10px;
+	width: 100%;
+	height: auto;
+	border-collapse: collapse;
+}
+
+table thead  tr {
+	height: 25px;
+	font-size: 19px;
+}
+
+table thead tr th {
+	padding-bottom: 10px;
+	border-bottom: 2px solid #999;
+}
+
+table #tb td {
+	height: 60px;
+	font-size: 15px;
+}
+
+table td {
+	text-align: center;
+	border-bottom: 1px dotted #ccc;
+}
+
+table td.title {
+	text-align: left;
+	text-indent: 10px;
+}
+
+table td.title a {
+	display: block;
+}
+
+table td.title a:hover {
+	font-weight: bold;
+}
+
+table .user {
+	width: 150px;
+}
+
+table .date {
+	width: 120px;
+}
+
+table .like, table .hit {
+	width: 70px;
+}
+
+table .like img, table .hit img {
+	width: 25px;
+	margin-top: 10px;
+}
+
+table tr.paging td {
+	border: 0;
+	padding-top: 100px;
+}
+
+table td.nopost {
+	border: 0;
+	line-height: 30px;
+}
+
+table td.nopost.one {
+	padding-top: 70px;
+}
+
+table td.nopost.two a {
+	font-weight: bold;
+	font-size: 20px;
+}
+
+table td.nopost.two a:hover {
+	color: #c10000;
+}

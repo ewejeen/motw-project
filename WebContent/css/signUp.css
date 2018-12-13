@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	background: #000 url("../img/bg-1.jpg");
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.signUp {
+	width: 400px;
+	min-height: 600px;
+	height: auto;
+	background: #fff;
+	margin: 0 auto;
+	padding: 30px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signUp ul li {
+	margin: 0 auto;
+	height: 60px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+.signUp ul li.top {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 30px;
+}
+
+.signUp ul li.top h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+}
+
+.signUp ul li.top img {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.signUp ul li span {
+	font-size: 15px;
+}
+
+.signUp ul li span.desc {
+	font-size: 11.5px;
+	margin-left: 10px;
+	color: #c10000;
+	font-style:italic;
+}
+
+.signUp ul li input {
+	width: 100%;
+	height: 35px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	margin-top: 5px;
+}
+
+.signUp ul li:nth-child(6) {
+	padding-top: 10px;
+}
+
+.signUp ul li:nth-child(6) input {
+	display: block;
+	font-size: 15px;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 0;
+	cursor: pointer;
+}
+
+.signUp ul span.acc {
+	position: relative;
+	display: block;
+	top: 30px;
+	height: 10px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.signUp ul span.acc a {
+	font-weight: bold;
+	color: #D10000;
+}

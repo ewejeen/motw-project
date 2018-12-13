@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context>
+    
+    	<!-- url="jdbc:mysql://localhost:3306/motw?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul" -->
+    <Resource 
+    	name="jdbc/mysqlDB"
+    	auth="Container"
+    	username="cestyoojin"
+    	password="na4934na!!"
+    	type="javax.sql.DataSource"
+    	driverClassName="com.mysql.cj.jdbc.Driver"
+    	url="jdbc:mysql://localhost:3306/cestyoojin?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul"
+    	logintimeout="100"
+    	maxActive="500"
+    	maxIdle="100" />   
+ 
+    <!-- Oracle -->
+    <!-- 
+    <Resource
+      	name="jdbc/OracleDB"
+      	auth="Container"
+      	type="javax.sql.DataSource"
+      	username="system"
+      	password="1111"
+      	driverClassName="oracle.jdbc.driver.OracleDriver"
+      	url="jdbc:oracle:thin:@localhost:1521:orcl"
+      	maxActive="500"
+      	maxIdle="100" />
+	-->
+</Context>

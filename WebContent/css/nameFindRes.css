@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	background: #000 url("../img/bg-1.jpg");
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.nameFindRes {
+	width: 400px;
+	min-height: 360px;
+	height: auto;
+	background: #fff;
+	margin: 0 auto;
+	padding: 30px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.nameFindRes ul li {
+	margin: 0 auto;
+	height: 60px;
+	box-sizing: border-box;
+	margin-bottom: 10px;
+}
+
+.nameFindRes ul li.top {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 50px;
+}
+
+.nameFindRes ul li.top h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+}
+
+.nameFindRes ul li.top img {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.nameFindRes ul li span {
+	font-size: 15px;
+}
+
+.nameFindRes ul li span.result {
+	font-size: 20px;
+}
+
+.nameFindRes ul li input {
+	width: 100%;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	margin-bottom: 10px;
+}
+
+.nameFindRes ul li input[type=button] {
+	font-size: 15px;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 0;
+	cursor: pointer;
+	margin-top: 0;
+}

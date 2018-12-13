@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	background: #000 url("../img/bg-1.jpg");
+	background-size: cover;
+	position: relative;
+	overflow: hidden;
+}
+
+.signIn {
+	width: 400px;
+	min-height: 550px;
+	height: auto;
+	background: #fff;
+	margin: 0 auto;
+	padding: 30px;
+	box-sizing: border-box;
+	position: absolute;
+	top: 54%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.signIn ul li {
+	margin: 0 auto;
+	height: 60px;
+	box-sizing: border-box;
+	margin-bottom: 30px;
+}
+
+.signIn ul li.top {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 50px;
+}
+
+.signIn ul li.top h1 {
+	text-align: center;
+	font-weight: 100;
+	font-size: 25px;
+}
+
+.signIn ul li.top img {
+	display: block;
+	width: 100px;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+.signIn ul li span {
+	font-size: 15px;
+}
+
+.signIn ul li a.fg {
+	float: right;
+	font-size: 13px;
+	color: #00f;
+}
+
+.signIn ul li input {
+	width: 100%;
+	height: 40px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	margin-top: 10px;
+}
+
+.signIn ul li:nth-child(4) {
+	padding-top: 20px;
+	height: 30px;
+}
+
+.signIn ul li:nth-child(4) input[type=checkbox] {
+	width: 13px;
+	line-height: 13px;
+	display: inline;
+	float: left;
+	margin-top: 0;
+}
+
+.signIn ul li:nth-child(4) p {
+	font-size: 13px;
+	line-height: 13px;
+	float: left;
+	margin-top: 12px;
+	margin-left: 5px;
+}
+
+.signIn ul li:nth-child(5) input {
+	font-size: 15px;
+	height: 50px;
+	line-height: 50px;
+	text-indent: 0;
+	cursor: pointer;
+	margin-top: 0;
+}
+
+.signIn ul span.noacc {
+	position: relative;
+	display: block;
+	top: 30px;
+	height: 10px;
+	text-align: center;
+	font-size: 15px;
+}
+
+.signIn ul span.noacc a {
+	font-weight: bold;
+	color: #D10000;
+}

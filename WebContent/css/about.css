@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.about {
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: 100%;
+}
+
+.about .container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.container .top {
+	width: 100%;
+	height: 70px;
+	margin-bottom: 30px;
+}
+
+.container .top .l2 h1 {
+	float: left;
+	color: #c10000;
+	font-size: 38px;
+	font-weight: 800;
+}
+
+.container .top .l2 span {
+	float: left;
+	color: #c1000099;
+	font-size: 16px;
+	margin-top: 21px;
+	margin-left: 20px;
+	font-style: italic;
+}
+
+.about .container .con {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.about .container .con .info {
+	width: 100%;
+	height: auto;
+	float: left;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 2px solid #c10000;
+}
+
+.about .container .con .info .name {
+	width: 50%;
+	height: 160px;
+	float: left;
+}
+
+.con .info .name h1 {
+	float: right;
+	font-size: 50px;
+	margin-right: 20px;
+	line-height: 160px;
+}
+
+.con .info .name span {
+	float: right;
+	color: #999;
+	line-height: 190px;
+	margin-right: 15px;
+}
+
+.con .info ul {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+.con .info ul li {
+	height: 40px;
+}
+
+.con .info ul li img {
+	margin: 4px 10px 4px 0;
+	float: left;
+}
+
+.con .info ul li span {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+}
+
+.con .info ul li a {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 40px;
+}
+
+.about .container .con .skill {
+	width: 100%;
+	float: left;
+}
+
+.about .container .con .skill ul {
+	width: 33.33%;
+	box-sizing: border-box;
+	float: left;
+}
+
+.about .container .con .skill ul li {
+	list-style: disc;
+	margin-left: 50px;
+}
+
+span#moreBtn {
+	display: inline-block;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	border: 1px solid #c10000;
+	text-align: center;
+	cursor: pointer;
+	margin: 50px 0;
+	transition: all .5s ease;
+	float: left;
+}
+
+span#moreBtn:hover {
+	background: #c10000;
+	color: #fff;
+}
+
+.con .more {
+	width: 100%;
+	float: left;
+	display: none;
+	margin-bottom: 100px;
+}
+
+.con .more.open {
+	display: block;
+}
+
+.more .degree {
+	margin-bottom: 40px;
+}
+
+.more .licon {
+	width: 77%;
+	float: left;
+	margin-top: 10px;
+}
+
+.more span {
+	display: block;
+	width: 67%;
+	float: left;
+}
+
+.more .degree span.n {
+	height: 50px;
+}
+
+.more .date {
+	display: inline;
+	float: right;
+	width: 140px;
+	color: #999;
+	margin-top: 10px;
+}
+
+.more .degree:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.more .education {
+	margin-bottom: 40px;
+}
+
+.more .education:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.more .awards {
+	margin-bottom: 40px;
+}
+
+.more .awards:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.more .qualification {
+	
+}
+
+.more .certificate {
+	margin-bottom: 40px;
+}
+
+.more .certificate:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.more .english {
+	margin-bottom: 25px;
+}
+
+.more .english:after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.more span.n {
+	display: inline-block;
+	width: 30%;
+	font-size: 18px;
+	font-weight: 500;
+	margin-right: 20px;
+}
+
+.more .date span {
+	width: 100%;
+}

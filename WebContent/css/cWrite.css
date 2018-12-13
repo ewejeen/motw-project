@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+#wrap {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
+
+.cWrite {
+	position: relative;
+	top: 50px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 200px;
+}
+
+.cWrite .container {
+	width: 75%;
+	margin: 0 auto;
+}
+
+.cWrite .con ul li {
+	margin: 0 auto;
+	height: 50px;
+	box-sizing: border-box;
+	margin-bottom: 15px;
+}
+
+.cWrite .con .ttl {
+	width: 100%;
+	height: 40px;
+	border-bottom: 2px solid #c10000;
+	margin-bottom: 50px;
+	margin-top: 10px;
+}
+
+.cWrite .con .ttl h1 {
+	font-weight: 100;
+	float: left;
+	font-size: 25px;
+}
+
+.cWrite ul li span {
+	font-size: 15px;
+	text-align: center;
+	float: left;
+	diaplay: block;
+	background: #c10000;
+	color: #fff;
+	width: 11%;
+	height: 100%;
+	line-height: 50px;
+}
+
+.cWrite ul li input, textarea {
+	width: 89%;
+	height: 50px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ccc;
+	text-indent: 10px;
+	float: right;
+	box-sizing: border-box;
+}
+
+.cWrite ul li input:reaaonly {
+	background: #fff;
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.cWrite ul li:nth-child(3) {
+	height: 400px;
+}
+
+.cWrite ul li:nth-child(3) span {
+	line-height: 400px;
+}
+
+.cWrite ul li:nth-child(3) textarea {
+	height: 100%;
+	padding: 10px;
+	text-indent: 0;
+}
+
+.cWrite ul li:nth-child(4) {
+	padding-top: 10px;
+}
+
+.cWrite ul li:nth-child(4) input {
+	display: block;
+	font-size: 16px;
+	width: 13%;
+	height: 45px;
+	line-height: 45px;
+	text-indent: 0;
+	cursor: pointer;
+	float: right;
+	margin-left: 15px;
+	background: #8a0000;
+	color: #fff;
+}
+
+.cWrite ul li:nth-child(4) input:hover {
+	font-weight: bold;
+}
