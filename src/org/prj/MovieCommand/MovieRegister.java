@@ -31,6 +31,7 @@ public class MovieRegister implements MovieCommand {
 
 		String title = multi.getParameter("title");
 		String content = multi.getParameter("content");
+		content = content.replace("\r\n","<br>");
 		String catchph = multi.getParameter("catchph");
 		String username = multi.getParameter("username");
 		String rlsDate = multi.getParameter("rlsDate");
@@ -49,10 +50,6 @@ public class MovieRegister implements MovieCommand {
 				youtube);
 
 		if (result == 1) {
-			System.out.println("성공!");
-			System.out.println(directory);
-			System.out.println(image);
-			System.out.println(request.getContextPath());
 			request.setAttribute("url", "/movieList.mv");
 		} else {
 			System.out.println("실패!");

@@ -21,7 +21,7 @@
 				
 				<div class="con">
 					
-					<c:forEach var="list" items="${requestScope.list }">
+					<c:forEach var="list" items="${requestScope.list }" varStatus="status">
 						<ul>
 							<li>
 								<img src="<%=request.getContextPath() %>/upload/${list.image }" alt="image" onclick="location.href='movieView.mv?title=${list.title}'"/>
@@ -30,14 +30,14 @@
 								<div class="sub">
 									<input type="hidden" name="username" id="username" value="${list.username }" />
 									
-									<%-- 영화 등록 날짜가 해당 날짜(등록 날짜)와 같으면 금주의 영화라고 표시 --%>
-									<fmt:parseDate value="20181206" pattern="yyyyMMdd" var="critDate" />
-									<fmt:formatDate value="${critDate }" pattern="yyyyMMdd" var="critDate2" />
+									<%-- 오늘 날짜 - 영화 등록 날짜가 7보다 작으면 금주의 영화라고 표시 --%>
+									<jsp:useBean id="today" class="java.util.Date" />
+									<fmt:formatDate value="${today}" pattern="yyyyMMdd" var="nowDate"/>
 									<fmt:formatDate value="${list.regDate }" pattern="yyyyMMdd" var="regDate" />
 									
 									<div class="ttl">
 										<c:choose>
-											<c:when test="${regDate eq critDate2}">
+											<c:when test="${nowDate - regDate < 7}">
 												<img src="img/new.png" alt="motw" class="motwImg" />
 											</c:when>
 											<c:otherwise>

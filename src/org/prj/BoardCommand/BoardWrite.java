@@ -19,7 +19,7 @@ public class BoardWrite implements BoardCommand {
 		String username = request.getParameter("username");
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		
+		content = content.replace("\r\n","<br>");
 		BoardDAO dao = BoardDAO.getInstance();
 		int result = dao.write(title, content, username);
 		
