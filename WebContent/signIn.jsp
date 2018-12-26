@@ -1,21 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
-<%
-	Cookie[] cookies = request.getCookies();
-	String cookieId = "";
-	String cookiePw = "";
-	if(cookies != null){	// 쿠키 cookies가 null이 아니라면 cookieId와 cookiePw 가져옴
-		for(int i=0;i<cookies.length;i++){
-			if(cookies[i].getName().trim().equals("cookieId")){
-				cookieId = cookies[i].getValue();
-			}
-			if(cookies[i].getName().trim().equals("cookiePw")){
-				cookiePw = cookies[i].getValue();
-			}
-		}
-	}
-%>
+
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <html>
@@ -25,6 +10,7 @@
 <link rel="stylesheet" href="css/signIn.css" media="all" />
 <title>#MOTW :: Sign In</title>
 <script src="js/signInFn.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
 <script>
 	if(${sessionId ne null }){
 		alert('You are already signed in.');
@@ -32,9 +18,9 @@
 	}
 
 	function enterkey() {
-        if (window.event.keyCode == 13) {
-        	signInFn();
-        }
+		if (window.event.keyCode == 13) {
+			signInFn();
+		}
 	}
 </script>
 </head>
@@ -72,5 +58,25 @@
 			</div>
 		</div>
 	</div>
+	<script>
+	$('#username').val(Cookies.get('key'));      
+	if($('#username').val() != ''){
+		$('#autoIn').attr('checked', true);
+	}
+    
+	$('#autoIn').change(function(){
+	    if($('#autoIn').is(':checked')){
+	        Cookies.set('key', $('#username').val(), { expires: 7 });
+	    }else{
+	        Cookies.remove('key');
+	    }
+	});
+	     
+	$('#username').keyup(function(){
+	    if($('#autoIn').is(':checked')){
+	        Cookies.set('key', $('#username').val(), { expires: 7 });
+	    }
+	});		
+	</script>
 </body>
 </html>
