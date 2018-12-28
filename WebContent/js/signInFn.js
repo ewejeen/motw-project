@@ -1,41 +1,43 @@
-function signInFn() {
-	var name = $('#username');
-	var pw = $('#userPw');
+function validateEncryptedForm() {
+	var username = document.getElementById("username");
+	var userPw = document.getElementById("userPw");
 
-	if (name.val() == null || name.val() == "") {
+	if (username.value == null || username.value == "") {
 		alert('Enter username.');
-		name.focus();
+		username.focus();
 		return false;
 	}
-	if (pw.val() == null || pw.val() == "") {
+	if (userPw.value == null || userPw.value == "") {
 		alert('Enter password.');
-		pw.focus();
+		userPw.focus();
 		return false;
 	}
 
-	ajaxSignIn();
-}
-
-var xhr = new XMLHttpRequest();
-function ajaxSignIn() {
-	var url = 'signIn.mo';
-	var data = '?username=' + username.value + '&userPw=' + userPw.value;
-
-	xhr.open('post', url + data, true);
-	xhr.setRequestHeader('Content-Type',
-			'application/x-www-urlencoded;charset=utf8');
-	xhr.onreadystatechange = ajaxSignInOk;
-	xhr.send(null);
-}
-
-function ajaxSignInOk() {
-	if (xhr.readyState == 4 && xhr.status == 200) {
-		var result = xhr.responseText;
-		if (result == 1) {
-			location.href = 'index.jsp';
-		} else {
-			alert('Incorrect username or password. Please try again.');
-			return;
-		}
+	try {
+		var rsaPublicKeyModulus = document
+				.getElementById("rsaPublicKeyModulus").value;
+		var rsaPublicKeyExponent = document
+				.getElementById("rsaPublicKeyExponent").value;
+		submitEncryptedForm(username.value, userPw.value, rsaPublicKeyModulus,
+				rsaPublicKeyExponent);
+	} catch (err) {
+		alert(err);
 	}
+	return false;
+}
+
+function submitEncryptedForm(username, userPw, rsaPublicKeyModulus,
+		rsaPpublicKeyExponent) {
+	var rsa = new RSAKey();
+	rsa.setPublic(rsaPublicKeyModulus, rsaPpublicKeyExponent);
+
+	// 사용자ID와 비밀번호를 RSA로 암호화한다.
+	var securedName = rsa.encrypt(username);
+	var securedPw = rsa.encrypt(userPw);
+
+	// POST 로그인 폼에 값을 설정하고 submit 한다.
+	var signInFormRSA = document.getElementById("signInFormRSA");
+	signInFormRSA.securedName.value = securedName;
+	signInFormRSA.securedPw.value = securedPw;
+	signInFormRSA.submit();
 }
