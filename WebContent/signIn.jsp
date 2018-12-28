@@ -14,7 +14,6 @@
 <script src="js/rsa/rsa.js"></script>
 <script src="js/rsa/prng4.js"></script>
 <script src="js/rsa/rng.js"></script>
-<script src="/js/login.js"></script>
 <script>
 	if(${sessionId ne null }){
 		alert('You are already signed in.');
