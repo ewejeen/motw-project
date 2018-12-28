@@ -13,7 +13,7 @@
 <script>
 	if(${sessionId eq null }){
 		alert('Sign in is required.');
-		location.href='signIn.jsp';		
+		location.href='signInForm.mo';		
 	}
 	
 	function enterkey() {

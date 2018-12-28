@@ -30,7 +30,7 @@
 					<div class="userMenu">
 						<c:if test="${sessionId==null }">
 							<a href="signUp.jsp">Sign Up</a>					
-							<a href="signIn.jsp">Sign In</a>
+							<a href="signInForm.mo">Sign In</a>
 							<a href="about.jsp">About Developer</a>
 						</c:if>
 						<c:if test="${sessionId!=null }">

@@ -9,7 +9,7 @@
 <script>
 	if(${sessionId eq null }){
 		alert('Sign in is required.');
-		location.href='signIn.jsp';		
+		location.href='signInForm.mo';		
 	}
 </script>
 <script src="js/jquery-3.3.1.js"></script>

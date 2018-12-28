@@ -22,6 +22,7 @@ import org.prj.MemberCommand.NameCheck;
 import org.prj.MemberCommand.NameFind;
 import org.prj.MemberCommand.PwFind;
 import org.prj.MemberCommand.SignIn;
+import org.prj.MemberCommand.SignInEncrypt;
 import org.prj.MemberCommand.SignUp;
 
 @WebServlet("*.mo")
@@ -50,10 +51,16 @@ public class MemberController extends HttpServlet {
 			command.executeQueryCommand(request, response);
 			url = (String) request.getAttribute("url");
 			break;
+		case "/signInForm.mo":
+			command = new SignInEncrypt();
+			command.executeQueryCommand(request, response);
+			url = (String) request.getAttribute("url");
+			break;
 		case "/signIn.mo":
 			command = new SignIn();
 			command.executeQueryCommand(request, response);
-			return;
+			url = (String) request.getAttribute("url");
+			break;
 		case "/nameFind.mo":
 			command = new NameFind();
 			command.executeQueryCommand(request, response);

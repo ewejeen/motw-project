@@ -14,7 +14,7 @@
 <c:if test="${sessionId==null }">
 	<script>
 		alert('Sign in is required.');
-		location.href='signIn.jsp';
+		location.href='signInForm.mo';
 	</script>
 </c:if>
 </head>

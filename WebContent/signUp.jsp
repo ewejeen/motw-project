@@ -61,7 +61,7 @@
                         <!-- input 하나라서 엔터키 submit이 자동으로 적용됨. 방지 위해 hidden input 추가 -->
 			            <input style="visibility: hidden; width: 0px;">
                     </li>
-					<span class="acc">Already have an account? <a class="acc" href="signIn.jsp">Sign in!</a></span>
+					<span class="acc">Already have an account? <a class="acc" href="signInForm.mo">Sign in!</a></span>
 				</ul>
 			</form>
 		</div>

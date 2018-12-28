@@ -12,7 +12,7 @@
 <script>
 	if(${sessionId eq null }){
 		alert('Sign in is required.');
-		location.href='signIn.jsp';
+		location.href='signInForm.mo';
 	}
 	
 	// input text 입력하고 enter키 치면 함수 실행

@@ -34,7 +34,7 @@
 		                       <span class="result"><b><%=request.getAttribute("result") %></b></span>
 						</li>
 		                <li>
-		                    <input type="button" value="Sign In" onclick="location.href='signIn.jsp'" />
+		                    <input type="button" value="Sign In" onclick="location.href='signInForm.mo'" />
 		                </li>					
 					</c:otherwise>
 				</c:choose>	

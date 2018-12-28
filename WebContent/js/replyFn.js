@@ -4,7 +4,7 @@ function replyFn() {
 
 	if (username.value == null || username.value == "") {
 		alert('Sign in is required.');
-		location.href = 'signIn.jsp';
+		location.href = 'signInForm.mo';
 		return;
 	}
 

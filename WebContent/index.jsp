@@ -45,7 +45,7 @@
 					<div class="container">
 						<p>The movies have <span>one same theme.</span></p>
 						<p>The theme changes <span>every week.</span></p>
-						<p class="s"><span onclick="location.href='signIn.jsp'">Sign in</span> to make a list of movies you like.</p>
+						<p class="s"><span onclick="location.href='signInForm.mo'">Sign in</span> to make a list of movies you like.</p>
 					</div>
 				</div>
 				
@@ -62,7 +62,7 @@
 							<span>Start</span> browsing <span>#MOTW</span> <span class="h" onclick="location.href='movieList.mv'">here!</span>
 						</p>
 						<p>
-							Or before that, <span class="h" onclick="location.href='signUp.jsp'">sign up</span> or <span class="h" onclick="location.href='signIn.jsp'">sign in</span> :)
+							Or before that, <span class="h" onclick="location.href='signUp.jsp'">sign up</span> or <span class="h" onclick="location.href='signInForm.mo'">sign in</span> :)
 						</p>
 					</div>
 				</div>

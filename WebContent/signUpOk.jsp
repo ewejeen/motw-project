@@ -22,7 +22,7 @@
                 	<span>Welcome! You are successfully signed up.</span>
 				</li>
 				<li>
-					<input type="button" value="Sign In" onclick="location.href='signIn.jsp'"/>
+					<input type="button" value="Sign In" onclick="location.href='signInForm.mo'"/>
 					<input type="button" value="Go to Main Page" onclick="location.href='index.jsp'"/>
 				</li>
 			</ul>

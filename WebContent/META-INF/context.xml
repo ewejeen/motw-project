@@ -9,7 +9,7 @@
     	password="na4934na!!"
     	type="javax.sql.DataSource"
     	driverClassName="com.mysql.cj.jdbc.Driver"
-    	url="jdbc:mysql://localhost:3306/cestyoojin?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul"
+    	url="jdbc:mysql://localhost:3306/motw?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=Asia/Seoul"
     	logintimeout="100"
     	maxActive="500"
     	maxIdle="100" />   
