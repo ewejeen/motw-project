@@ -566,7 +566,6 @@ public class BoardDAO {
 			query = "DELETE FROM clike WHERE userName=? AND boardno=? AND likeCheck=1";
 			pstm = conn.prepareStatement(query);
 
-			
 			pstm.setString(1, username);
 			pstm.setInt(2, boardno);
 
