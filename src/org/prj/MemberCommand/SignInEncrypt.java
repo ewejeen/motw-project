@@ -41,9 +41,9 @@ public class SignInEncrypt implements MemberCommand {
 			request.setAttribute("publicKeyModulus", publicKeyModulus);
 			request.setAttribute("publicKeyExponent", publicKeyExponent);
 
-			request.setAttribute("url", "/signIn.jsp");
-		} catch (Exception ex) {
-			throw new ServletException(ex.getMessage(), ex);
+			request.setAttribute("url", "/signIn.jsp"); 
+		} catch (Exception e) {
+			throw new ServletException(e.getMessage(), e);
 		}
 	}
 }

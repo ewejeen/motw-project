@@ -15,6 +15,11 @@ function mModify() {
 		pw2.focus();
 		return;
 	}
+	if (pwCheck() == 2) {
+		alert('Password is not valid.');
+		pw.focus();
+		return;
+	}
 	if (email.val() == null || email.val() == "") {
 		alert('Enter email.');
 		email.focus();
@@ -36,8 +41,14 @@ function mModify() {
 				'userEmail' : email.val()
 			},
 			success : function(data) {
-				alert('Edit successful.');
-				location.href = 'memberView.mo?username=' + name.val();
+				if (data == 1) {
+					console.log(data);
+					alert('Edit successful.');
+					location.href = 'memberView.mo?username=' + name.val();
+				} else {
+					alert('Edit failed. Please try again.');
+					return;
+				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				alert('Edit failed. Please try again.');

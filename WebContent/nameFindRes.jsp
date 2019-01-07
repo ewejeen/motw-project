@@ -36,7 +36,7 @@
 					<c:otherwise>
 						<li>
 		                	<span>Your username is</span>
-		                    <span class="result"><b><%=request.getAttribute("result") %></b></span>
+		                    <span class="result"><b>${result }</b></span>
 						</li>
 	                    <li>
 	                        <input type="button" value="Sign In" onclick="location.href='signInForm.mo'" />

@@ -54,8 +54,8 @@ public class SignIn implements MemberCommand {
 			}
 			request.setAttribute("url", url);
 
-		} catch (Exception ex) {
-			throw new ServletException(ex.getMessage(), ex);
+		} catch (Exception e) {
+			throw new ServletException(e.getMessage(), e);
 		}
 	}
 

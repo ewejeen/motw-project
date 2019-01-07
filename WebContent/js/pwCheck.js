@@ -30,12 +30,19 @@ function pwCheck() {
 			'background-position' : '96% 50%'
 		});
 		return true;
-	} else if (pw.val() != pw2.val() || validatePw(pw.val()) == false) {
+	} else if (pw.val() != pw2.val()) {
 		pw2.css({
 			'background' : 'url("img/cancel.png") no-repeat 50%',
 			'background-size' : '20px 20px',
 			'background-position' : '96% 50%'
 		});
 		return false;
+	} else if(validatePw(pw.val()) == false){
+		pw2.css({
+			'background' : 'url("img/cancel.png") no-repeat 50%',
+			'background-size' : '20px 20px',
+			'background-position' : '96% 50%'
+		});
+		return 2;
 	}
 }

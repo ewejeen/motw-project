@@ -66,7 +66,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select count(*) from member where username=? and userPw=?";
+			query = "SELECT COUNT(*) FROM member WHERE username=? AND userPw=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, username);
@@ -106,7 +106,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select count(*) from member where username=?";
+			query = "SELECT COUNT(*) FROM member WHERE username=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, username);
@@ -147,7 +147,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select count(*) from member where userEmail=?";
+			query = "SELECT COUNT(*) FROM member WHERE userEmail=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, userEmail);
@@ -187,7 +187,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select username from member where userEmail=?";
+			query = "SELECT username FROM member WHERE userEmail=?";
 			pstm = conn.prepareStatement(query);
 			pstm.setString(1, userEmail);
 
@@ -227,7 +227,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select userPw from member where username=? and userEmail=?";
+			query = "SELECT userPw FROM member WHERE username=? AND userEmail=?";
 			pstm = conn.prepareStatement(query);
 			pstm.setString(1, username);
 			pstm.setString(2, userEmail);
@@ -268,7 +268,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "select * from member where username=?";
+			query = "SELECT * FROM member WHERE username=?";
 			pstm = conn.prepareStatement(query);
 			pstm.setString(1, username);
 
@@ -311,7 +311,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "delete from member where username=? and userPw=?";
+			query = "DELETE FROM member WHERE username=? AND userPw=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, username);
@@ -346,7 +346,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "update member set userPw=?, userEmail=? where username=?";
+			query = "UPDATE member SET userPw=?, userEmail=? WHERE username=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, dto.getUserPw());

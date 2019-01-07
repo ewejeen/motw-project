@@ -40,7 +40,7 @@
 								
 								<li>
 			                        <span>Username</span> 
-			                        <input type="text" name="username" id="username" maxlength="30" value="${sessionId }" disabled >
+			                        <input type="text" name="username" id="username" maxlength="30" value="${dto.username }" disabled >
 								</li>
 								<li>
 			                        <span>Password</span>
@@ -76,9 +76,10 @@
 	<script>
 	 	/* 이메일 변경을 안 하면 중복 검사에서 걸리므로 안 걸리게 하기 위해 emailCheck 함수 재정의 */
 	 	/* EL 쓰므로 js파일 분리 X */
-		var userEmail=document.getElementById('userEmail');
+		var userEmail = document.getElementById('userEmail');
+	 	var emailCh = document.getElementById('emailCh');
 	 	if(userEmail.value=='${dto.userEmail }'){
-			document.getElementById('emailCh').value='checked';
+			emailCh.value='checked';
 	 		userEmail.style.background = 'url("img/checked.png") no-repeat 50%';
 			userEmail.style.backgroundSize = '20px 20px';
 			userEmail.style.backgroundPosition = '96% 50%';
@@ -87,7 +88,6 @@
 	 	var xhr = new XMLHttpRequest();
 	
 	 	function emailCheck() {
-	 		var userEmail = document.getElementById('userEmail');
 	 		var url = 'emailCheck.mo';
 	 		var data = '?userEmail=' + encodeURI(userEmail.value);
 	
@@ -101,8 +101,6 @@
 	 	function emailCheckOk() {
 	 		if (xhr.readyState == 4 && xhr.status == 200) {
 	 			var result = xhr.responseText;
-	 			var userEmail = document.getElementById('userEmail');
-	 			var emailCh = document.getElementById('emailCh');
 	 			if (result == 1) {
 	 				userEmail.style.background = 'url("img/cancel.png") no-repeat 50%';
 	 				userEmail.style.backgroundSize = '20px 20px';

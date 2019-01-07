@@ -6,18 +6,18 @@ function signUpFn() {
 	var nameCh = $('#nameCh');
 	var emailCh = $('#emailCh');
 
-	if (name.val() == null || name.val() == "") {
+	if (name.val() == null || name.val() == '') {
 		alert('Enter username.');
 		name.focus();
 		return;
 	}
-	if (nameCh.val() == "unchecked") {
+	if (nameCh.val() == 'unchecked') {
 		alert('Username is not valid.');
 		name.focus();
 		return;
 	}
 
-	if (pw.val() == null || pw.val() == "") {
+	if (pw.val() == null || pw.val() == '') {
 		alert('Enter password.');
 		pw.focus();
 		return;
@@ -27,23 +27,23 @@ function signUpFn() {
 		pw.focus();
 		return;
 	}
-	if (pw2.val() == null || pw2.val() == "" || pwCheck() == false) {
+	if (pw2.val() == null || pw2.val() == '' || pwCheck() == false) {
 		alert('Confirm password.');
 		pw2.focus();
 		return;
 	}
-	if (email.val() == null || email.val() == "") {
+	if (email.val() == null || email.val() == '') {
 		alert('Enter email.');
 		email.focus();
 		return;
 	}
-	if (emailCh.val() != "checked") {
+	if (emailCh.val() != 'checked') {
 		alert('Email is not valid.');
 		email.focus();
 		return;
 	}
 
-	if (confirm('Proceed signUp.') == true) {
+	if (confirm('Proceed sign up.') == true) {
 		signUpForm.submit();
 	} else {
 		return;

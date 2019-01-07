@@ -31,10 +31,10 @@
 						<span>This page can only be accessed by admin.</span>
 					</div>
 					<div class="con">
-						<c:if test="${fn:length(list) ==1 }">
+						<c:if test="${fn:length(list) == 1 }">
 							<h4>Total: ${fn:length(list) } member</h4>							
 						</c:if>
-						<c:if test="${fn:length(list)>1 }">
+						<c:if test="${fn:length(list) > 1 }">
 							<h4>Total: ${fn:length(list) } members</h4>							
 						</c:if>
 						<table>

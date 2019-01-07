@@ -41,7 +41,7 @@
 							    </li>
 								<li>
 			                        <span>Please verify your password to delete your account.</span>
-			                        <input type="hidden" name="username" id="username" value="${sessionId }" />
+			                        <input type="hidden" name="username" id="username" value="${dto.username }" />
 							        <input type="password" name="userPw" id="userPw" onkeyup="enterkey()">
 							        <input type="hidden" name="userPw2" id="userPw2" value="${dto.userPw }" />
 								</li>

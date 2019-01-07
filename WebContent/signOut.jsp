@@ -8,7 +8,7 @@
 </head>
 <body>
 	<script>
-		window.onload=function(){
+		window.onload = function() {
 			if (confirm('Do you really wish to sign out?') == true) {
 				location.href = 'signOutOk.jsp';
 				return false;
