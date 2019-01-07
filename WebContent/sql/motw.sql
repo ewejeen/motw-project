@@ -10,11 +10,6 @@ userPw varchar(200) not null,
 userEmail varchar(200) not null
 ) default charset=utf8;
 
-select * from member;
-select count(*) from member where username='yoojin' and userPw='1234';
-
-drop table member;
-
 create table community(
 no int auto_increment primary key,
 cGroup int default 0,

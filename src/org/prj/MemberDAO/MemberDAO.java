@@ -30,7 +30,7 @@ public class MemberDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "insert into member(username, userPw, userEmail) values(?,?,?)";
+			query = "INSERT INTO member VALUES(?,?,?)";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, dto.getUsername());
