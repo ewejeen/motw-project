@@ -20,8 +20,6 @@ public class BoardDelete implements BoardCommand {
 		BoardDAO dao = BoardDAO.getInstance();
 		int result = dao.delete(no);
 		
-		System.out.println(result);
-		
 		PrintWriter out = response.getWriter();
 		out.write(result+"");
 		out.flush();

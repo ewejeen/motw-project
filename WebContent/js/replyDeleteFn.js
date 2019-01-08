@@ -7,7 +7,12 @@ function replyDeleteFn(no) {
 				'no' : no
 			},
 			success : function(data) {
-				replyList();
+				if (data == 1) {
+					replyList();
+				} else {
+					alert('Delete failed. Please try again.');
+					return;
+				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				alert('Delete failed. Please try again.');

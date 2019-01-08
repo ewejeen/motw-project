@@ -28,13 +28,11 @@ public class BoardSearch implements BoardCommand {
 		
 		BoardDAO dao = BoardDAO.getInstance();
 		
-		PagingClass pagingList = dao.paging(pNum);
+		PagingClass pagingList = dao.pagingSearch(pNum, crit, search);
 		ArrayList<BoardDTO> list = dao.search(crit, search, pagingList.getStartNum(), pagingList.getEndNum());
 	
-		
 		request.setAttribute("pagingList", pagingList);
 		request.setAttribute("list", list);
 		request.setAttribute("url", "/community.jsp");
-		
 	}
 }

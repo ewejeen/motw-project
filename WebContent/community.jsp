@@ -15,7 +15,6 @@
 <title>#MOTW :: Community</title>
 <link rel="stylesheet" href="css/reset.css">
 <link rel="stylesheet" href="css/community.css">
-<script src="js/jquery-3.3.1.js"></script>
 </head>
 <body>
 	<div id="wrap">
@@ -47,6 +46,7 @@
 											<a href="cView.bo?no=${list.no }">${list.title }</a>
 										</c:if>
 										<c:if test="${sessionId!=null }">
+											<!-- likeCheck 받아와서 꽉 찬 하트 띄우기 위함 -->
 											<a href="cView.bo?no=${list.no }&username=${sessionId}">${list.title }</a>										
 										</c:if>
 									</td>

@@ -16,16 +16,16 @@ public class BoardEdit implements BoardCommand {
 	@Override
 	public void executeQueryCommand(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
+
 		int no = Integer.parseInt(request.getParameter("no"));
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
-		
+
 		BoardDAO dao = BoardDAO.getInstance();
 		int result = dao.edit(title, content, no);
-		
+
 		PrintWriter out = response.getWriter();
-		out.write(result+"");
+		out.write(result + "");
 		out.flush();
 	}
 }

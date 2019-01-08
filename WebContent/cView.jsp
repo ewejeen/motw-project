@@ -80,63 +80,6 @@
 					                    			<img src="img/heart_red_un.png" class="reply" id="like1" alt="like" onclick="likeFn()" style="display: none;"/>
 					                    			<img src="img/heart_red.png" class="reply" id="like2" alt="like" onclick="unlikeFn()" />
 				                    			</c:if>
-				                    			
-				                    			<script>
-													var like1 = document.getElementById('like1');
-													var like2 = document.getElementById('like2');
-													
-													var no = document.getElementById('no');
-													var username = document.getElementById('username');
-													var likeCheck = document.getElementById('likeCheck');
-													
-													var xhr = new XMLHttpRequest();
-													function likeFn() {
-														var url = 'cLike.bo';
-														var data = '?boardno=' + no.value + '&username=' + username.value;
-													
-														xhr.open('post', url + data, true);
-														xhr.setRequestHeader('Content-Type',
-																'application/x-www-urlencoded;charset=utf8');
-														xhr.onreadystatechange = likeOk;
-														xhr.send(null);
-													}
-													function likeOk() {
-														if (xhr.readyState == 4 && xhr.status == 200) {
-															var result = xhr.responseText;
-															if (result == 1) {
-																likeCheck.value = 1;
-																like1.style.display = 'none';
-																like2.style.display = 'block';
-													
-																replyList();
-															}
-														}
-													}
-													
-													function unlikeFn() {
-														var url = 'cUnlike.bo';
-														var data = '?boardno=' + no.value + '&username=' + username.value;
-													
-														xhr.open('post', url + data, true);
-														xhr.setRequestHeader('Content-Type',
-																'application/x-www-urlencoded;charset=utf8');
-														xhr.onreadystatechange = unlikeOk;
-														xhr.send(null);
-													}
-													function unlikeOk() {
-														if (xhr.readyState == 4 && xhr.status == 200) {
-															var result = xhr.responseText;
-															if (result == 1) {
-																likeCheck.value = 0;
-																like1.style.display = 'block';
-																like2.style.display = 'none';
-													
-																replyList();
-															}
-														}
-													}
-												</script>
-					                    		
 					                    		<img src="img/comment_bubble.png" class="reply" alt="comment" onclick="replyFocus()"/>	                    				
 		                    				</c:when>
 		                    				<c:otherwise>
@@ -188,12 +131,11 @@
 	var xhr = new XMLHttpRequest();
 	function replyList() {
 		var cGroup = document.getElementById('cGroup');
-		var url = "replyList.bo?";
-		var data = "cGroup=" + cGroup.value;
-		xhr.open("post", url + data, true);
+		var url = 'replyList.bo';
+		var data = '?cGroup=' + cGroup.value;
+		xhr.open('post', url + data, true);
 		xhr.setRequestHeader('Content-Type',
 				'application/x-www-urlencoded;charset=utf8');
-	
 		xhr.onreadystatechange = replyListOk;
 		xhr.send(null);
 	}
@@ -214,7 +156,7 @@
 				table.appendChild(tr);
 				var td = document.createElement('td');
 	
-				td.innerHTML = "No comments written for this post.";
+				td.innerHTML = 'No comments written for this post.';
 				td.style.textAlign = 'center';
 				tr.appendChild(td);
 			}
@@ -245,6 +187,6 @@
 	}
 	
 </script>
-
+<script src="js/likeUnlike.js"></script>
 </body>
 </html>

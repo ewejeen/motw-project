@@ -12,7 +12,6 @@
 		location.href='signInForm.mo';		
 	}
 </script>
-<script src="js/jquery-3.3.1.js"></script>
 <script src="js/searchFn.js"></script>
 <script src="js/cWrite.js"></script>
 </head>

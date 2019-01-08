@@ -3,7 +3,7 @@ package org.prj.BoardDTO;
 public class PagingClass {
 	private int pNum; // 현재 페이지
 	private int rowSize; // 한 페이지 당 글(레코드) 수
-	private int block; // 한 페이지에 보일 페이지 수
+	private int block; // 한 페이지 (하단)에 보일 페이지 수
 	private int startNum; // 해당 페이지에서 가져올 첫 번째 글(레코드) - LIMIT
 	private int endNum; // 해당 페이지에서 가져올 글(레코드)의 개수 - LIMIT
 	private int total; // 전체 글(레코드) 수

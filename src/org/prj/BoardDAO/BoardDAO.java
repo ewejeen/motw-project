@@ -76,6 +76,60 @@ public class BoardDAO {
 		return pagingList;
 	}
 
+	///// Community 게시글 검색 시 페이징 구현
+	public PagingClass pagingSearch(int pNum, String crit, String search) {
+		PagingClass pagingList = null;
+		Connection conn = null;
+		PreparedStatement pstm = null;
+		ResultSet rs = null;
+		String query = "";
+
+		int rowSize = 5;
+		int block = 5;
+		int startNum = (pNum - 1) * rowSize;
+		int endNum = rowSize;
+
+		int startPage = ((pNum - 1) / block) * block + 1;
+		int endPage = startPage + block - 1;
+		int totalPage = 0;
+		int total = 0;
+
+		try {
+			conn = DBConnect.getConnection();
+			query = "SELECT COUNT(*) FROM community WHERE " + crit + " LIKE ? AND step = 0";
+			pstm = conn.prepareStatement(query);
+
+			pstm.setString(1, "%" + search + "%");
+
+			rs = pstm.executeQuery();
+			if (rs.next()) {
+				total = rs.getInt(1);
+			}
+			totalPage = (int) Math.ceil(total / (double) rowSize);
+			if (endPage > totalPage) {
+				endPage = totalPage;
+			}
+
+			pagingList = new PagingClass(pNum, rowSize, block, startNum, endNum, total, totalPage, startPage, endPage);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (conn != null)
+					conn.close();
+				if (pstm != null)
+					conn.close();
+				if (rs != null)
+					rs.close();
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+			}
+		}
+
+		return pagingList;
+	}
+
 	///// Community 게시글 목록
 	public ArrayList<BoardDTO> list(int startNum, int endNum) {
 		ArrayList<BoardDTO> result = new ArrayList<>();
@@ -500,7 +554,6 @@ public class BoardDAO {
 
 	///// Community 댓글 목록
 	public ArrayList<BoardDTO> replyList(int cGroup) {
-
 		ArrayList<BoardDTO> result = new ArrayList<>();
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -728,7 +781,7 @@ public class BoardDAO {
 
 	///// 좋아요 했는지 확인
 	public int getLikeCheck(String username, int boardno) {
-		int result =0;
+		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstm = null;
 		String query = "";
@@ -738,7 +791,7 @@ public class BoardDAO {
 			conn = DBConnect.getConnection();
 			query = "SELECT likeCheck FROM clike WHERE username=? AND boardno=?";
 			pstm = conn.prepareStatement(query);
-			
+
 			pstm.setString(1, username);
 			pstm.setInt(2, boardno);
 

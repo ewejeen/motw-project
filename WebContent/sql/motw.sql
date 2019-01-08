@@ -23,18 +23,6 @@ likeCnt int default 0 not null,
 hit int default 0 not null,
 foreign key(username) references member(username)
 ) default charset=utf8;
-update community set likeCnt=0 where step=0;
-select * from community;
-
-update community set likeCnt=0 where no=22;
-
-drop table community;
-
-insert into community(indent, step, title,content,username,regDate,likeCnt,hit) values(0,0,'title1','content1','12',sysdate(),0,0);
-insert into community(indent, step, title,content,username,regDate,likeCnt,hit) values(0,0,'title2','content2','12',sysdate(),0,0);
-insert into community(indent, step, title,content,username,regDate,likeCnt,hit) values(0,1,'title3','content3','12',sysdate(),0,0);
-SELECT * FROM community WHERE cGroup=1 and step>0 ORDER BY step ASC LIMIT 0, 5;
-insert into community(cGroup,indent,step,title,content,username,regDate) values(1,1,1,'hihi','hhhh','yoojin',sysdate());
 
 create table cLike(
 boardno int not null,

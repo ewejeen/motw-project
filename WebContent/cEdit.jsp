@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="css/cEdit.css" media="all" />
 <title>#MOTW :: Edit</title>
 <script>
-	if(${sessionId eq null }){
+	if(${sessionId eq null || sessionId ne dto.username}){
 		alert('Access denied.');
 		history.go(-1);	
 	}
@@ -31,7 +31,7 @@
 							<li>
 		                        <span>Username</span> 
 		                        <input type="hidden" name="no" id="no" value="${dto.no }" />
-		                        <input type="text" name="username" id="username" value="${sessionId }" readonly>
+		                        <input type="text" name="username" id="username" value="${dto.username }" readonly>
 							</li>
 							<li>
 		                        <span>Title</span>

@@ -25,7 +25,6 @@ public class ReplyList implements BoardCommand {
 		PrintWriter out = response.getWriter();
 		out.write(getJSON(cGroup));
 		out.close();
-
 	}
 
 	public String getJSON(int cGroup) {
