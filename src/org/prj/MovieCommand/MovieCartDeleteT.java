@@ -15,10 +15,11 @@ public class MovieCartDeleteT implements MovieCommand {
 			throws ServletException, IOException {
 
 		String title = request.getParameter("title");
+		String rlsDate = request.getParameter("rlsDate");
 		String username = request.getParameter("username");
 
 		MovieDAO dao = MovieDAO.getInstance();
-		int result = dao.cartDelete(title, username);
+		int result = dao.cartDelete(title, rlsDate, username);
 
 		PrintWriter out = response.getWriter();
 		out.write(result + "");

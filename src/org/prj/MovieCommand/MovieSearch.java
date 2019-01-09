@@ -31,9 +31,11 @@ public class MovieSearch implements MovieCommand {
 		PagingClass pagingList = dao.paging(pNum, crit, search);
 		ArrayList<MovieDTO> list = dao.search(crit, search, pagingList.getStartNum(), pagingList.getEndNum());
 
+		request.setAttribute("crit", crit);
+		request.setAttribute("search", search);
 		request.setAttribute("pagingList", pagingList);
 		request.setAttribute("list", list);
-		request.setAttribute("url", "/thisWeek.jsp");
+		request.setAttribute("url", "/thisWeekSearch.jsp");
 
 	}
 }

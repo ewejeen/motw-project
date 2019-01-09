@@ -34,7 +34,6 @@
 							<li>
 		                        <span>Title</span>
 		                        <input type="hidden" name="no" id="no" value="${dto.no }" />
-		                        <input type="hidden" name="username" id="username" value="${sessionId }" />
 						        <input type="text" name="title" id="title" value="${dto.title }" >
 							</li>
 							<li>

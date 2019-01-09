@@ -51,8 +51,6 @@ public class MovieRegister implements MovieCommand {
 
 		if (result == 1) {
 			request.setAttribute("url", "/movieList.mv");
-		} else {
-			System.out.println("실패!");
 		}
 	}
 }

@@ -33,6 +33,5 @@ public class MovieCartAddS implements MovieCommand {
 		} else if (cartId.dupItem(no) == 1) {
 			request.setAttribute("url", "addCart.jsp?addNum=" + 0);
 		}
-
 	}
 }

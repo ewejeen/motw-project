@@ -25,7 +25,7 @@ function twEdit() {
 		return false;
 	}
 	if ($('#catchph').val() == null || $('#catchph').val() == "") {
-		alert('Enter catchph.');
+		alert('Enter catchphrase.');
 		$('#catchph').focus();
 		return false;
 	}
@@ -33,24 +33,28 @@ function twEdit() {
 	if (confirm('Edit this movie?') == true) {
 
 		$.ajax({
-			url : "movieEdit.mv",
+			url : 'movieEdit.mv',
 			type : 'POST',
 			data : {
-				"no" : $('#no').val(),
-				"title" : $('#title').val(),
-				"content" : $('#content').val(),
-				"catchph" : $('#catchph').val(),
-				"username" : $('#username').val(),
-				"director" : $('#director').val(),
-				"stars" : $('#stars').val(),
-				"rlsDate" : $('#rlsDate').val(),
-				"rotten" : $('#rotten').val(),
-				"imdb" : $('#imdb').val(),
-				"wiki" : $('#wiki').val(),
-				"youtube" : $('#youtube').val()
+				'no' : $('#no').val(),
+				'title' : $('#title').val(),
+				'content' : $('#content').val(),
+				'catchph' : $('#catchph').val(),
+				'director' : $('#director').val(),
+				'stars' : $('#stars').val(),
+				'rlsDate' : $('#rlsDate').val(),
+				'rotten' : $('#rotten').val(),
+				'imdb' : $('#imdb').val(),
+				'wiki' : $('#wiki').val(),
+				'youtube' : $('#youtube').val()
 			},
 			success : function(data) {
-				location.href = 'movieView.mv?title=' + $('#title').val();
+				if (data == 1) {
+					location.href = 'movieView.mv?title=' + $('#title').val();
+				} else {
+					alert('Edit failed. Please try again.');
+					return;
+				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				alert('Edit failed. Please try again.');

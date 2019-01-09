@@ -17,7 +17,6 @@ public class MovieEdit implements MovieCommand {
 		String title = request.getParameter("title");
 		String content = request.getParameter("content");
 		String catchph = request.getParameter("catchph");
-		String username = request.getParameter("username");
 		String director = request.getParameter("director");
 		String stars = request.getParameter("stars");
 		String rlsDate = request.getParameter("rlsDate");
@@ -28,7 +27,7 @@ public class MovieEdit implements MovieCommand {
 		int no = Integer.parseInt(request.getParameter("no"));
 		
 		MovieDAO dao = MovieDAO.getInstance();
-		int result = dao.edit(title, content, catchph, username, director, stars, rlsDate, rotten, imdb, wiki, youtube, no);
+		int result = dao.edit(title, content, catchph, director, stars, rlsDate, rotten, imdb, wiki, youtube, no);
 		
 		PrintWriter out = response.getWriter();
 		out.write(result+"");

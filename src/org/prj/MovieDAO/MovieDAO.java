@@ -298,7 +298,7 @@ public class MovieDAO {
 	}
 
 	///// ThisWeek 게시글 보기
-	public MovieDTO view(String title) {
+	public MovieDTO view(String title, String rlsDate) {
 		MovieDTO result = null;
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -307,10 +307,11 @@ public class MovieDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "SELECT * FROM thisweek WHERE title=?";
+			query = "SELECT * FROM thisweek WHERE title=? AND rlsDate=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, title);
+			pstm.setString(2, rlsDate);
 
 			rs = pstm.executeQuery();
 
@@ -324,7 +325,7 @@ public class MovieDAO {
 					String image = rs.getString("image");
 					String director = rs.getString("director");
 					String stars = rs.getString("stars");
-					String rlsDate = rs.getString("rlsDate");
+					String rlsDate2 = rs.getString("rlsDate");
 					Timestamp regDate = rs.getTimestamp("regDate");
 					int likeCnt = rs.getInt("likeCnt");
 					int hit = rs.getInt("hit");
@@ -333,7 +334,7 @@ public class MovieDAO {
 					String wiki = rs.getString("wiki");
 					String youtube = rs.getString("youtube");
 
-					result = new MovieDTO(no, title2, content, catchph, username, image, director, stars, rlsDate,
+					result = new MovieDTO(no, title2, content, catchph, username, image, director, stars, rlsDate2,
 							regDate, likeCnt, hit, rotten, imdb, wiki, youtube);
 				}
 			}
@@ -389,7 +390,7 @@ public class MovieDAO {
 	}
 
 	///// ThisWeek 게시글 수정
-	public int edit(String title, String content, String catchph, String username, String director, String stars,
+	public int edit(String title, String content, String catchph, String director, String stars,
 			String rlsDate, String rotten, String imdb, String wiki, String youtube, int no) {
 
 		int result = 0;
@@ -399,21 +400,20 @@ public class MovieDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "UPDATE thisweek SET title=?, content=?, catchph=?, username=?, director=?, stars=?, rlsDate=?, rotten=?, imdb=?, wiki=?, youtube=? WHERE no=?";
+			query = "UPDATE thisweek SET title=?, content=?, catchph=?, director=?, stars=?, rlsDate=?, rotten=?, imdb=?, wiki=?, youtube=? WHERE no=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, title);
 			pstm.setString(2, content);
 			pstm.setString(3, catchph);
-			pstm.setString(4, username);
-			pstm.setString(5, director);
-			pstm.setString(6, stars);
-			pstm.setString(7, rlsDate);
-			pstm.setString(8, rotten);
-			pstm.setString(9, imdb);
-			pstm.setString(10, wiki);
-			pstm.setString(11, youtube);
-			pstm.setInt(12, no);
+			pstm.setString(4, director);
+			pstm.setString(5, stars);
+			pstm.setString(6, rlsDate);
+			pstm.setString(7, rotten);
+			pstm.setString(8, imdb);
+			pstm.setString(9, wiki);
+			pstm.setString(10, youtube);
+			pstm.setInt(11, no);
 
 			result = pstm.executeUpdate();
 		} catch (SQLException e) {
@@ -495,12 +495,10 @@ public class MovieDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-
 			query = "SELECT * FROM cart WHERE username=? ORDER BY cartDate ASC";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, username);
-
 			rs = pstm.executeQuery();
 
 			while (rs.next()) {
@@ -570,7 +568,7 @@ public class MovieDAO {
 	}
 
 	// 로그인 시 카트 항목 삭제
-	public int cartDelete(String title, String username) {
+	public int cartDelete(String title, String rlsDate, String username) {
 		int result = 0;
 		Connection conn = null;
 		PreparedStatement pstm = null;
@@ -578,11 +576,12 @@ public class MovieDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "DELETE FROM cart WHERE title=? and username=?";
+			query = "DELETE FROM cart WHERE title=? AND rlsDate=? AND username=?";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, title);
-			pstm.setString(2, username);
+			pstm.setString(2, rlsDate);
+			pstm.setString(3, username);
 
 			result = pstm.executeUpdate();
 		} catch (SQLException e) {

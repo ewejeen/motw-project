@@ -35,7 +35,7 @@ function twWrite() {
 		return false;
 	}
 
-	if (confirm('Register this movie.') == true) {
+	if (confirm('Register this movie?') == true) {
 		$('#twWriteForm').submit();
 	}
 }

@@ -1,18 +1,22 @@
 function deleteFnT() {
-	var username = $('#username');
-	var title = $('#title');
-
 	if (confirm('Do you really wish to delete this from My Movies?') == true) {
 
 		$.ajax({
-			url : "movieCartDeleteT.mv",
+			url : 'movieCartDeleteT.mv',
 			type : 'POST',
 			data : {
-				"username" : username.val(),
-				"title" : title.val()
+				'title' : $('#title').val(),
+				'rlsDate' : $('#rlsDate').val(),
+				'username' : $('#username').val()
 			},
 			success : function(data) {
-				location.href = 'movieCartListT.mv?username=' + username.val();
+				if (data == 1) {
+					location.href = 'movieCartListT.mv?username='
+							+ $('#username').val();
+				} else {
+					alert('Delete failed. Please try again.');
+					return;
+				}
 			},
 			error : function(jqXHR, textStatus, errorThrown) {
 				alert('Delete failed. Please try again.');

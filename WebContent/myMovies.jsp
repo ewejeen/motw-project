@@ -9,7 +9,6 @@
 <meta charset="UTF-8" />
 <title>#MOTW :: My Movies</title>
 <link rel="stylesheet" href="css/myMovies.css" media="all" />
-<script src="js/jquery-3.3.1.js"></script>
 <script src="js/deleteFnT.js"></script>
 <script src="js/deleteFnS.js"></script>
 </head>
@@ -23,6 +22,7 @@
 					<h1>My Movies</h1>
 				</div>
 				<div class="con">
+					<!-- 비 로그인 시 -->
 					<c:if test="${sessionId==null }">
 						<c:if test="${cartList.size == 1 }">
 							<h5 class="l1">You have added ${cartList.size } movie.</h5>							
@@ -45,15 +45,13 @@
 											<img src="<%=request.getContextPath() %>/upload/${cartList.image[i] }" alt="${cartList.image[i] }" />
 											<input type="hidden" name="no" id="no" value="${cartList.no[i] }" />
 											<div class="sub">
-												<span class="title" onclick="location.href='movieView.mv?title=${cartList.title[i]}'">${cartList.title[i] }</span>
+												<span class="title" onclick="location.href='movieView.mv?title=${cartList.title[i]}&rlsDate=${cartList.rlsDate[i] }'">${cartList.title[i] }</span>
 												<span class="rlsDate">${cartList.rlsDate[i] }</span>
 												<p class="director">directed by <b>${cartList.director[i] }</b></p>
 											</div>
 											<div class="menu">
 												<%-- <input type="button" value="Delete" onclick="location.href='movieCartDeleteS.mv?no=${cartList.no[i]}'" /> --%>
 												<input type="button" value="Delete" onclick="deleteFnS(${cartList.no[i]})" />
-												
-												
 											</div>
 										</li>
 									</c:forEach>
@@ -61,6 +59,8 @@
 							</c:otherwise>
 						</c:choose>
 					</c:if>
+					
+					<!-- 로그인 시 -->
 					<c:if test="${sessionId!=null }">
 						<c:if test="${fn:length(list) ==1 }">
 							<h5 class="l1 l2">You have added ${fn:length(list) } movie.</h5>							
@@ -80,12 +80,13 @@
 										<li>
 											<img src="<%=request.getContextPath() %>/upload/${list.image }" alt="${list.image }" />
 											<div class="sub">
-												<span class="title" onclick="location.href='movieView.mv?title=${list.title}'">${list.title }</span>
+												<span class="title" onclick="location.href='movieView.mv?title=${list.title}&rlsDate=${list.rlsDate }'">${list.title }</span>
 												<span class="rlsDate">${list.rlsDate }</span>
 												<p class="director">directed by <b>${list.director }</b></p>
 												
 												<input type="hidden" name="username" id="username" value="${sessionId }" />
 												<input type="hidden" name="title" id="title" value="${list.title }" />												
+												<input type="hidden" name="rlsDate" id="rlsDate" value="${list.rlsDate }" />												
 											</div>
 											<div class="menu">
 												<input type="button" value="Delete" onclick="deleteFnT()"/>

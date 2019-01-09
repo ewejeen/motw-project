@@ -17,9 +17,10 @@ public class MovieEditView implements MovieCommand {
 			throws ServletException, IOException {
 		
 		String title = request.getParameter("title");
+		String rlsDate = request.getParameter("rlsDate");
 		
 		MovieDAO dao = MovieDAO.getInstance();
-		MovieDTO dto = dao.view(title);
+		MovieDTO dto = dao.view(title, rlsDate);
 		
 		request.setAttribute("dto", dto);
 		request.setAttribute("url", "/twEdit.jsp");		

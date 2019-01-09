@@ -79,30 +79,27 @@
 				<div class="paging">
 					<c:if test="${pagingList.total==0 }">
 						<ul>
-							<li class="nopost one">No movies registered yet.</li>
-							<c:if test="${sessionId eq 'admin' }">
-								<li class="nopost two"><a href="twWrite.jsp">Click here to register.</a></li>
-							</c:if>
+							<li class="nopost one">No results.</li>
 						</ul>
 					</c:if>
 					
 					<c:if test="${pagingList.pNum>pagingList.block }">
-						<a href="movieList.mv?pNum=1">◀◀　</a>
-						<a href="movieList.mv?pNum=${pagingList.startPage-1}">◀</a>								
+						<a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=1">◀◀　</a>
+						<a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=${pagingList.startPage-1}">◀</a>								
 					</c:if>
 					
 					<c:forEach var="i" begin="${pagingList.startPage }" end="${pagingList.endPage }">
 						<c:if test="${i==pagingList.pNum }">
-							<b><a href="movieList.mv?pNum=${i }">${i }</a></b>									
+							<b><a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=${i }">${i }</a></b>									
 						</c:if>
 						<c:if test="${i!=pagingList.pNum }">
-							<a href="movieList.mv?pNum=${i }">${i }</a>																			
+							<a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=${i }">${i }</a>																			
 						</c:if>
 					</c:forEach>
 					
 					<c:if test="${pagingList.endPage < pagingList.totalPage }">
-						<a href="movieList.mv?pNum=${pagingList.endPage+1}">▶　</a>
-						<a href="movieList.mv?pNum=${pagingList.totalPage}">▶▶</a>								
+						<a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=${pagingList.endPage+1}">▶　</a>
+						<a href="movieSearch.mv?crit=${crit }&search=${search }&pNum=${pagingList.totalPage}">▶▶</a>								
 					</c:if>
 				</div>
 			</div>
