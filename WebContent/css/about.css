@@ -105,6 +105,10 @@
 	float: left;
 }
 
+.about .container .con .skill span{
+	font-weight:bold;
+}
+
 .about .container .con .skill ul {
 	width: 33.33%;
 	box-sizing: border-box;

@@ -48,19 +48,27 @@
 					<div class="skill">
 						<h2>SKILLS</h2>
 						<ul>
+							<span>Back-End</span>
 							<li>Java</li>
 							<li>JSP</li>
-							<li>MySQL</li>
+							<li>AJAX</li>
+							<li>Spring Framework</li>
+							<li>MyBatis</li>
 						</ul>
 						<ul>
-							<li>AJAX</li>
+							<span>Front-End</span>
 							<li>JavaScript</li>
 							<li>jQuery</li>
-						</ul>
-						<ul>
 							<li>HTML5</li>
 							<li>CSS3</li>
-							<li>Spring Framework</li>
+						</ul>
+						<ul>
+							<span>DataBase</span>
+							<li>MySQL</li>
+							<li>Oracle</li>
+							<span>Etc</span>
+							<li>GitHub</li>
+							<li>AWS</li>
 						</ul>
 					</div>
 					
