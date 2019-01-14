@@ -116,6 +116,60 @@
 	margin-left: 50px;
 }
 
+.about .container .con .portfolio {
+	width: 100%;
+	float: left;
+	margin-top: 50px;
+}
+
+.about .container .con .portfolio .top {
+	margin: 0;
+	height: auto;
+}
+
+.about .container .con .portfolio .top h2 {
+	display: inline-block;
+}
+
+.about .container .con .portfolio .top span {
+	font-size: 14px;
+	margin-left: 10px;
+	color: #999;
+	font-style: italic;
+}
+
+.about .container .con .portfolio ul {
+	width: 49%;
+	box-sizing: border-box;
+	float: left;
+}
+
+.about .container .con .portfolio ul.right {
+	margin-left: 2%;
+}
+
+.about .container .con .portfolio ul li img {
+	width: 100%;
+	margin: 10px 0 20px;
+	box-shadow: 2px 2px 5px #ccc;
+	cursor: pointer;
+}
+
+.about .container .con .portfolio ul li.title {
+	width: 100%;
+	text-align: center;
+	font-size: 19px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	text-decoration: underline;
+}
+
+.about .container .con .portfolio ul li.desc {
+	width: 100%;
+	font-size: 15px;
+	text-align:center;
+}
+
 span#moreBtn {
 	display: inline-block;
 	width: 100%;

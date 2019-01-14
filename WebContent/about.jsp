@@ -59,8 +59,26 @@
 						</ul>
 						<ul>
 							<li>HTML5</li>
-							<li>CSS</li>
+							<li>CSS3</li>
 							<li>Spring Framework</li>
+						</ul>
+					</div>
+					
+					<div class="portfolio">
+						<div class="top">
+							<h2>개발자의 다른 프로젝트</h2>
+							<span>이미지를 클릭하시면 해당 웹사이트로 이동합니다.</span>
+						</div>
+						<ul>
+							<li><img src="img/myworkstat.png" alt="MyWorkStat" onclick="window.open('http://cestyoojin.cafe24.com/myworkstat')"/></li>
+							<li class="title">MyWorkStat</li>
+							<li class="desc">근태 관리 웹사이트 <br>(Spring Framework, MyBatis...)</li>
+						</ul>
+
+						<ul class="right">
+							<li><img src="img/kurlykyj.png" alt="Kurly_KYJ" onclick="window.open('http://cestyoojin.cafe24.com/kurly_kyj')"/></li>
+							<li class="title">'마켓 컬리' 화면 구현</li>
+							<li class="desc">화면 구현 위주 + 일부 기능 (미완성) <br>(HTML5, CSS3, JavaScript...)</li>
 						</ul>
 					</div>
 					<span id="moreBtn">MORE</span>
