@@ -161,15 +161,13 @@ public class MovieDAO {
 					String stars = rs.getString("stars");
 					String rlsDate = rs.getString("rlsDate");
 					Timestamp regDate = rs.getTimestamp("regDate");
-					int likeCnt = rs.getInt("likeCnt");
-					int hit = rs.getInt("hit");
 					String rotten = rs.getString("rotten");
 					String imdb = rs.getString("imdb");
 					String wiki = rs.getString("wiki");
 					String youtube = rs.getString("youtube");
 
 					result.add(new MovieDTO(no, title, content, catchph, username, image, director, stars, rlsDate,
-							regDate, likeCnt, hit, rotten, imdb, wiki, youtube));
+							regDate, rotten, imdb, wiki, youtube));
 				}
 			}
 		} catch (SQLException e) {
@@ -201,8 +199,8 @@ public class MovieDAO {
 
 		try {
 			conn = DBConnect.getConnection();
-			query = "INSERT INTO thisweek(title, content, catchph, username, image, director, stars, rlsDate, regDate, likeCnt, hit, rotten, imdb, wiki, youtube)"
-					+ "VALUES(?,?,?,?,?,?,?,?,sysdate(),0,0,?,?,?,?)";
+			query = "INSERT INTO thisweek(title, content, catchph, username, image, director, stars, rlsDate, regDate, rotten, imdb, wiki, youtube)"
+					+ "VALUES(?,?,?,?,?,?,?,?,sysdate(),?,?,?,?)";
 			pstm = conn.prepareStatement(query);
 
 			pstm.setString(1, title);
@@ -267,15 +265,13 @@ public class MovieDAO {
 					String stars = rs.getString("stars");
 					String rlsDate = rs.getString("rlsDate");
 					Timestamp regDate = rs.getTimestamp("regDate");
-					int likeCnt = rs.getInt("likeCnt");
-					int hit = rs.getInt("hit");
 					String rotten = rs.getString("rotten");
 					String imdb = rs.getString("imdb");
 					String wiki = rs.getString("wiki");
 					String youtube = rs.getString("youtube");
 
 					result.add(new MovieDTO(no, title, content, catchph, username, image, director, stars, rlsDate,
-							regDate, likeCnt, hit, rotten, imdb, wiki, youtube));
+							regDate, rotten, imdb, wiki, youtube));
 				}
 			}
 		} catch (SQLException e) {
@@ -327,15 +323,13 @@ public class MovieDAO {
 					String stars = rs.getString("stars");
 					String rlsDate2 = rs.getString("rlsDate");
 					Timestamp regDate = rs.getTimestamp("regDate");
-					int likeCnt = rs.getInt("likeCnt");
-					int hit = rs.getInt("hit");
 					String rotten = rs.getString("rotten");
 					String imdb = rs.getString("imdb");
 					String wiki = rs.getString("wiki");
 					String youtube = rs.getString("youtube");
 
 					result = new MovieDTO(no, title2, content, catchph, username, image, director, stars, rlsDate2,
-							regDate, likeCnt, hit, rotten, imdb, wiki, youtube);
+							regDate, rotten, imdb, wiki, youtube);
 				}
 			}
 		} catch (SQLException e) {
@@ -390,8 +384,8 @@ public class MovieDAO {
 	}
 
 	///// ThisWeek 게시글 수정
-	public int edit(String title, String content, String catchph, String director, String stars,
-			String rlsDate, String rotten, String imdb, String wiki, String youtube, int no) {
+	public int edit(String title, String content, String catchph, String director, String stars, String rlsDate,
+			String rotten, String imdb, String wiki, String youtube, int no) {
 
 		int result = 0;
 		Connection conn = null;

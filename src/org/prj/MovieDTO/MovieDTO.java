@@ -13,16 +13,14 @@ public class MovieDTO {
 	private String stars;
 	private String rlsDate;
 	private Timestamp regDate;
-	private int likeCnt;
-	private int hit;
 	private String rotten;
 	private String imdb;
 	private String wiki;
 	private String youtube;
 
 	public MovieDTO(int no, String title, String content, String catchph, String username, String image,
-			String director, String stars, String rlsDate, Timestamp regDate, int likeCnt, int hit, String rotten,
-			String imdb, String wiki, String youtube) {
+			String director, String stars, String rlsDate, Timestamp regDate, String rotten, String imdb, String wiki,
+			String youtube) {
 		super();
 		this.no = no;
 		this.title = title;
@@ -34,8 +32,6 @@ public class MovieDTO {
 		this.stars = stars;
 		this.rlsDate = rlsDate;
 		this.regDate = regDate;
-		this.likeCnt = likeCnt;
-		this.hit = hit;
 		this.rotten = rotten;
 		this.imdb = imdb;
 		this.wiki = wiki;
@@ -120,22 +116,6 @@ public class MovieDTO {
 
 	public void setRegDate(Timestamp regDate) {
 		this.regDate = regDate;
-	}
-
-	public int getLikeCnt() {
-		return likeCnt;
-	}
-
-	public void setLikeCnt(int likeCnt) {
-		this.likeCnt = likeCnt;
-	}
-
-	public int getHit() {
-		return hit;
-	}
-
-	public void setHit(int hit) {
-		this.hit = hit;
 	}
 
 	public String getRotten() {
